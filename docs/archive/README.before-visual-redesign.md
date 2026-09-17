@@ -1,3 +1,4 @@
+<!-- Archived presentation; model links updated to local copies. -->
 # Memory-Nonlinear State Models
 
 **Memory-NLS: auxiliary-field memory in 3D field dynamics and neural sequence models.**
@@ -99,8 +100,8 @@ the [reproduction guide](docs/reproduction.md).
 
 The original runs used an NVIDIA RTX 4060 Laptop GPU with 8 GB VRAM. That machine
 is no longer available. Final weights are preserved locally in `models/`, copied from:
-[Memory-NLS](https://huggingface.co/qrv0/mnsm-memnls-70m-enwik8) and
-[Transformer](https://huggingface.co/qrv0/mnsm-transformer-70m-enwik8).
+[Memory-NLS](../../models/mnsm-memnls-70m-enwik8/) and
+[Transformer](../../models/mnsm-transformer-70m-enwik8/).
 The [pretrained guide](docs/pretrained.md) supplies source revisions, checksum
 verification, offline CPU loading and Git LFS instructions. A complete original environment lock and training state are
 not included, so bitwise training replay is not established by this release.

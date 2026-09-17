@@ -18,12 +18,12 @@ pipeline_tag: text-generation
 # Transformer 70M (enwik8 byte-level) — structural-comparison baseline
 
 A 70M-parameter byte-level Transformer language model trained on enwik8 for
-structural comparison with [Memory-NLS](https://huggingface.co/qvr0/mnsm-memnls-70m-enwik8)
+structural comparison with [Memory-NLS](../mnsm-memnls-70m-enwik8/)
 at matched architectural shape.
 
 This model exists for **structural differentiation, not benchmark competition**.
 It is included in the
-[`qrv0/mnsm`](https://github.com/qrv0/mnsm)
+[`andujarleo/mnls`](https://github.com/andujarleo/mnls)
 repository as the contrast against which the Memory-NLS architecture's
 structural anti-collapse property is empirically demonstrated.
 
@@ -42,7 +42,7 @@ catastrophic loss of representational capacity during sustained training.
 Engineering patches (skip connections, layer normalization, gradient
 clipping, learning rate scheduling) defer this failure but do not remove it.
 
-See [`results/08-optimization-collapse-empirical.md`](https://github.com/qrv0/mnsm/blob/main/results/08-optimization-collapse-empirical.md)
+See [Final generation comparison](../../docs/final-generation.md)
 for the full structural finding.
 
 ## Architecture
@@ -79,36 +79,9 @@ Identical infrastructure to Memory-NLS:
 
 ## Usage
 
-```python
-import json
-import importlib.util
-import torch
-from huggingface_hub import hf_hub_download
-from safetensors.torch import load_file
-
-REPO = "qvr0/mnsm-transformer-70m-enwik8"
-
-config_path = hf_hub_download(REPO, "config.json")
-weights_path = hf_hub_download(REPO, "model.safetensors")
-modeling_path = hf_hub_download(REPO, "modeling.py")
-
-spec = importlib.util.spec_from_file_location("modeling", modeling_path)
-modeling = importlib.util.module_from_spec(spec)
-spec.loader.exec_module(modeling)
-
-with open(config_path) as f:
-    config_dict = json.load(f)
-
-model = modeling.TransformerLanguageModel(modeling.TransformerConfig(**config_dict))
-state = load_file(weights_path)
-model.load_state_dict(state)
-model.eval()
-
-prompt = "The history of "
-input_ids = torch.tensor([list(prompt.encode("utf-8"))])
-out = model.generate(input_ids, max_new_tokens=200, temperature=0.8, top_k=40)
-print(bytes(out[0].tolist()).decode("utf-8", errors="replace"))
-```
+Use the [offline inference example](../../docs/pretrained.md#cpu-inference-using-local-files)
+from the repository root. It loads the local configuration and weights with the
+preserved implementation, including the tied embedding weights.
 
 ## Final evaluation
 
@@ -126,16 +99,16 @@ print(bytes(out[0].tolist()).decode("utf-8", errors="replace"))
 @misc{mnsm,
   title  = {Memory-Nonlinear State Models: A Memory-Augmented Nonlinear Schrödinger
             Field Equation with State Space Model Correspondence},
-  author = {qrv0},
+  author = {Leonardo Andujar},
   year   = {2026},
-  url    = {https://github.com/qrv0/mnsm},
+  url    = {https://github.com/andujarleo/mnls},
   note   = {Three structural principles, one equation, seven cross-domain instantiations.}
 }
 ```
 
 ## Related
 
-- Full repository: https://github.com/qrv0/mnsm
-- Companion Memory-NLS model: https://huggingface.co/qvr0/mnsm-memnls-70m-enwik8
-- Structural finding documentation: https://github.com/qrv0/mnsm/blob/main/results/08-optimization-collapse-empirical.md
+- Full repository: https://github.com/andujarleo/mnls
+- [Companion Memory-NLS model](../mnsm-memnls-70m-enwik8/)
+- [Final generation comparison](../../docs/final-generation.md)
 - License: MIT (code) + CC BY 4.0 (documentation)

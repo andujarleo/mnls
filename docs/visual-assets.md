@@ -26,3 +26,11 @@ layer input residual. Drawn curves illustrate memory decay; they are not data.
 Both assets have descriptive alternative text in the README. The diagram also
 includes an SVG title and description. `docs/archive/README.before-visual-redesign.md`
 preserves the immediately preceding README.
+
+## Final generation comparison
+
+`assets/final-generation-comparison.svg` displays the full saved page/title
+output from each model at step 50,000, sourced from the two scale-up histories.
+Text is unchanged, including errors; only visual line wrapping was added.
+This is recorded output, not conceptual artwork. Accessible plain-text samples
+and the sampling conditions are in [the comparison](final-generation.md).

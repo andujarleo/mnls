@@ -40,7 +40,7 @@ and ended at val_ppl 4.87, worse than its pre-crash minimum.
 The structural anti-collapse mechanism the equation predicts in 3D field
 dynamics manifests in the optimization landscape of neural networks. Same
 form, different substrate. See full repository:
-[`github.com/qrv0/mnsm`](https://github.com/qrv0/mnsm).
+[`github.com/andujarleo/mnls`](https://github.com/andujarleo/mnls).
 
 ## Architecture
 
@@ -72,37 +72,9 @@ form, different substrate. See full repository:
 
 ## Usage
 
-```python
-import json
-import importlib.util
-import torch
-from huggingface_hub import hf_hub_download
-from safetensors.torch import load_file
-
-REPO = "qvr0/mnsm-memnls-70m-enwik8"
-
-config_path = hf_hub_download(REPO, "config.json")
-weights_path = hf_hub_download(REPO, "model.safetensors")
-modeling_path = hf_hub_download(REPO, "modeling.py")
-
-spec = importlib.util.spec_from_file_location("modeling", modeling_path)
-modeling = importlib.util.module_from_spec(spec)
-spec.loader.exec_module(modeling)
-
-with open(config_path) as f:
-    config_dict = json.load(f)
-
-model = modeling.MemoryNLSLanguageModel(modeling.MemoryNLSConfig(**config_dict))
-state = load_file(weights_path)
-model.load_state_dict(state)
-model.eval()
-
-# Generate
-prompt = "The history of "
-input_ids = torch.tensor([list(prompt.encode("utf-8"))])
-out = model.generate(input_ids, max_new_tokens=200, temperature=0.8, top_k=40)
-print(bytes(out[0].tolist()).decode("utf-8", errors="replace"))
-```
+Use the [offline inference example](../../docs/pretrained.md#cpu-inference-using-local-files)
+from the repository root. It loads the local configuration and weights with the
+preserved implementation, including the tied embedding weights.
 
 ## Final evaluation
 
@@ -118,7 +90,7 @@ print(bytes(out[0].tolist()).decode("utf-8", errors="replace"))
 ## Methodological frame
 
 This is not a benchmark contest. The Transformer comparison
-([`qvr0/mnsm-transformer-70m-enwik8`](https://huggingface.co/qvr0/mnsm-transformer-70m-enwik8))
+([`mnsm-transformer-70m-enwik8`](../mnsm-transformer-70m-enwik8/))
 is presented as **differentiation, not competition**. The structural finding
 is the trajectory shape (monotonic vs catastrophic), not the comparative
 final perplexity number.
@@ -143,16 +115,16 @@ for the structural claim.
 @misc{mnsm,
   title  = {Memory-Nonlinear State Models: A Memory-Augmented Nonlinear Schrödinger
             Field Equation with State Space Model Correspondence},
-  author = {qrv0},
+  author = {Leonardo Andujar},
   year   = {2026},
-  url    = {https://github.com/qrv0/mnsm},
+  url    = {https://github.com/andujarleo/mnls},
   note   = {Three structural principles, one equation, seven cross-domain instantiations.}
 }
 ```
 
 ## Related
 
-- Full repository: https://github.com/qrv0/mnsm
-- Companion Transformer (for differentiation): https://huggingface.co/qvr0/mnsm-transformer-70m-enwik8
-- Methodology: https://github.com/qrv0/mnsm/tree/main/methodology
+- Full repository: https://github.com/andujarleo/mnls
+- [Companion Transformer](../mnsm-transformer-70m-enwik8/)
+- [Reproduction guide](../../docs/reproduction.md)
 - License: MIT (code) + CC BY 4.0 (documentation)

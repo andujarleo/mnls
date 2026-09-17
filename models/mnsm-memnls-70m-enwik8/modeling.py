@@ -1,39 +1,6 @@
-"""Self-contained Memory-NLS language model for HuggingFace.
+"""Self-contained Memory-NLS language model for local checkpoint loading.
 
-Loads the published checkpoint without requiring the full mnsm repository.
-
-Usage:
-    import torch
-    from huggingface_hub import hf_hub_download
-    from safetensors.torch import load_file
-    import sys, importlib.util
-
-    # Download files
-    config_path = hf_hub_download("qvr0/mnsm-memnls-70m-enwik8", "config.json")
-    weights_path = hf_hub_download("qvr0/mnsm-memnls-70m-enwik8", "model.safetensors")
-    modeling_path = hf_hub_download("qvr0/mnsm-memnls-70m-enwik8", "modeling.py")
-
-    # Import modeling module
-    spec = importlib.util.spec_from_file_location("modeling", modeling_path)
-    modeling = importlib.util.module_from_spec(spec)
-    spec.loader.exec_module(modeling)
-
-    # Build model
-    import json
-    with open(config_path) as f:
-        config = json.load(f)
-    model = modeling.MemoryNLSLanguageModel(modeling.MemoryNLSConfig(**config))
-
-    # Load weights
-    state = load_file(weights_path)
-    model.load_state_dict(state)
-    model.eval()
-
-    # Generate
-    text = "The history of "
-    input_ids = torch.tensor([list(text.encode("utf-8"))])
-    out = model.generate(input_ids, max_new_tokens=200, temperature=0.8, top_k=40)
-    print(bytes(out[0].tolist()).decode("utf-8", errors="replace"))
+See docs/pretrained.md for the offline inference example.
 """
 
 from __future__ import annotations

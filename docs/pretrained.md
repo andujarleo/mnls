@@ -1,25 +1,24 @@
 # Preserved pretrained models
 
-Both public model repositories have been downloaded into `models/`, including
-their weights, configurations, original model cards, modeling code and attributes:
+Both models are included in `models/`, with weights, configurations, model cards,
+modeling code and attributes:
 
-| Model | Repository | Pinned revision |
+| Model | Local files | Snapshot revision |
 |---|---|---|
-| Memory-NLS | [qrv0/mnsm-memnls-70m-enwik8](https://huggingface.co/qrv0/mnsm-memnls-70m-enwik8) | `6133a700e8ec2de6bbf3ab5148894979aab7a2ab` |
-| Transformer | [qrv0/mnsm-transformer-70m-enwik8](https://huggingface.co/qrv0/mnsm-transformer-70m-enwik8) | `f34e1381653a711ead27228c5f9555c56241998a` |
+| Memory-NLS | [Weights and configuration](../models/mnsm-memnls-70m-enwik8/) | `6133a700e8ec2de6bbf3ab5148894979aab7a2ab` |
+| Transformer | [Weights and configuration](../models/mnsm-transformer-70m-enwik8/) | `f34e1381653a711ead27228c5f9555c56241998a` |
 
-These revision IDs were read from the public Hub API during publication preparation.
-The published configurations match the corresponding local scale-up configurations.
-The namespace is **qrv0**; the `qvr0` spelling in the model-card usage examples
-is a typo. Both model cards declare MIT metadata and state MIT for code and
-CC BY 4.0 for documentation in their related information.
+The configurations match the corresponding local scale-up configurations.
+The model cards state MIT for code and CC BY 4.0 for documentation.
 
 ## Verify the local copies
 
 The two weight files total 571,757,304 bytes (about 572 MB). Their SHA-256 hashes
-and byte sizes match the upstream LFS metadata at the pinned revisions. The four
-auxiliary files per model were checked against the upstream Git blob hashes.
-Source IDs, revisions and hashes are recorded in [manifest.json](../models/manifest.json).
+and byte sizes were checked against the published snapshots before inclusion.
+Model cards and module documentation now point to local files and this repository;
+executable model code, configurations and weights remain unchanged.
+Snapshot revisions, original auxiliary-file hashes and current checksums are
+recorded in [manifest.json](../models/manifest.json).
 
 From the repository root:
 
@@ -27,10 +26,8 @@ From the repository root:
 shasum -a 256 -c models/SHA256SUMS
 ```
 
-The model folders are complete local copies and can be used without access to
-the original Hugging Face account. Preserve this folder in your own backups too.
-The original remote READMEs retain their historical links and namespace typo;
-the working example below uses the local files.
+The model folders can be used without an external account. Preserve these complete
+local copies in your own backups too.
 
 ## CPU inference using local files
 

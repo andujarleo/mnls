@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="700" viewBox="0 0 1280 700" role="img" aria-labelledby="title desc">
+<title id="title">Final generations at step 50,000: Memory-NLS and Transformer</title>
+<desc id="desc">Complete stored outputs for the same page/title prompt. Only visual line wrapping is added. Source: outputs/scale_up/{memnls,xformer}/history.json, milestone_samples, step 50000. Memory-NLS retains recognizable corpus motifs but contains invented words and unmatched tags. Transformer shows malformed tags and attributes after its loss recovery.</desc>
+<rect width="1280" height="700" rx="20" fill="#0c1117"/>
+<g font-family="Arial, Helvetica, sans-serif">
+<text x="40" y="42" fill="#6ce4ce" font-size="13" font-weight="700" letter-spacing="3">BEYOND THE LOSS CURVE</text>
+<text x="40" y="86" fill="#edf4f4" font-size="30" font-weight="700">Same prompt. Final checkpoint. Different traces.</text>
+<text x="40" y="120" fill="#b5c5cb" font-size="17">enwik8 · step 50,000 · temperature 0.8 · top-k 40 · 300 new byte tokens</text>
+<text x="40" y="153" fill="#9baeb7" font-size="16">Prompt: &lt;page&gt; followed by a newline and two spaces, then &lt;title&gt;</text>
+<rect x="40" y="180" width="584" height="446" rx="12" fill="#121b24" stroke="#2c3b46"/>
+<rect x="40" y="180" width="584" height="4" fill="#63dfc8"/>
+<text x="62" y="220" fill="#63dfc8" font-size="25" font-weight="700">Memory-NLS</text>
+<text x="62" y="249" fill="#a2b6bf" font-size="15">Final validation perplexity 4.27</text>
+<g font-family="Menlo, Consolas, monospace" font-size="14.5" fill="#dbe4e9" xml:space="preserve">
+<text x="62" y="289">&lt;page&gt;</text>
+<text x="62" y="312">  &lt;title&gt;</text>
+<text x="62" y="335">    &lt;/revision&gt;</text>
+<text x="62" y="358">  &lt;/page&gt;</text>
+<text x="62" y="381">  &lt;page&gt;</text>
+<text x="62" y="404">    &lt;title&gt;Bistory of the Oringese Project]]</text>
+<text x="62" y="427"></text>
+<text x="62" y="450">==References==</text>
+<text x="62" y="473">* [http://www.eurogline.com  All begal on the [[Maacheth of</text>
+<text x="62" y="496"> Conway|1200]] [[United Kingdom]]. In September 2004)], 773</text>
+<text x="62" y="519">,585</text>
+<text x="62" y="542">|-</text>
+<text x="62" y="565">|align=&amp;quot;right&amp;quot; | 397,413</text>
+<text x="62" y="588">| align=&amp;quot;center&amp;quot; | Locuts and Fi</text>
+</g>
+<rect x="656" y="180" width="584" height="446" rx="12" fill="#121b24" stroke="#2c3b46"/>
+<rect x="656" y="180" width="584" height="4" fill="#f39588"/>
+<text x="678" y="220" fill="#f39588" font-size="25" font-weight="700">Transformer</text>
+<text x="678" y="249" fill="#a2b6bf" font-size="15">Final validation perplexity 4.87</text>
+<g font-family="Menlo, Consolas, monospace" font-size="14.5" fill="#dbe4e9" xml:space="preserve">
+<text x="678" y="289">&lt;page&gt;</text>
+<text x="678" y="312">  &lt;title&gt;</text>
+<text x="678" y="335">    &lt;contribuor&gt;</text>
+<text x="678" y="358">     &lt;username&gt;Edno Hojpy of Honday&lt;/ide and D</text>
+<text x="678" y="381">    &lt;id&gt;10120&lt;/id&gt;</text>
+<text x="678" y="404">    &lt;revision&gt;</text>
+<text x="678" y="427">      &lt;contributor&gt;</text>
+<text x="678" y="450"> space=&quot;&quot;preserv6-0ons Au&lt;/     &lt;comment&gt;/tire Restt [[[Bab</text>
+<text x="678" y="473">bblite]]]&lt;/commmment&gt;</text>
+<text x="678" y="496">      &lt;text xml:space=&quot;preserve&quot;&gt;#REDIRECT [[[Ficontinuic]]</text>
+<text x="678" y="519">&lt;/text&gt;</text>
+<text x="678" y="542">    &lt;/rername&gt;Christine Brunk Fra</text>
+</g>
+<text x="40" y="661" fill="#8fa5af" font-size="14">Original saved outputs, including their errors. Line wrapping added for display; no text corrected.</text>
+</g></svg>

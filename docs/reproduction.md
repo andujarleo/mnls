@@ -155,8 +155,7 @@ an offline verifier, preservation tests and CPU neural checks. Listed reference
 files were verified unchanged. The original README was copied before replacement.
 No experiment configuration, result, model or solver was edited.
 
-The model cards link to `qrv0/mnsm` on GitHub and state MIT for code and CC BY 4.0
-for documentation. License files are absent from this local extraction and must
+The model cards state MIT for code and CC BY 4.0 for documentation. License files are absent from this local extraction and must
 be restored from the authoritative project. The repository uses Git LFS to track
 the two complete weight snapshots; see the pretrained guide for clone and checksum
 verification instructions.

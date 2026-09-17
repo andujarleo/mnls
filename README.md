@@ -11,6 +11,7 @@
   <a href="#the-idea">The idea</a> ·
   <a href="#inside-the-model">How it works</a> ·
   <a href="#the-recorded-experiment">Results</a> ·
+  <a href="#after-recovery-the-final-generations">Final generations</a> ·
   <a href="#try-it-locally">Try it</a> ·
   <a href="docs/pretrained.md">Pretrained models</a>
 </p>
@@ -115,6 +116,35 @@ preserved without alteration.
 <a href="outputs/scale_up_run.log">original run log</a>.
 The cover and layer diagram are conceptual; the plots above are original experiment artifacts.</sub>
 
+## After recovery: the final generations
+
+**The loss curve recovers. What remains in the generated text?**
+
+At step 50,000, the Transformer's validation perplexity has recovered to **4.87**
+after reaching **27.17** during the collapse. Its final generation still contains
+damaged tag names, attributes and closures. The author describes these remaining
+defects as **structural scars**: recovery of the numerical metric accompanies an
+output that still bears visible damage.
+
+<img src="assets/final-generation-comparison.svg" alt="Complete saved outputs for the same page/title prompt at step 50,000. Memory-NLS contains recognizable references, links and table rows; the Transformer contains malformed tags such as contribuor and commmment. Both outputs contain errors." width="100%" />
+
+Both samples use the **same prompt**, **temperature 0.8**, **top-k 40** and
+**300 new byte tokens**. They come directly from the saved final milestone;
+no spelling, tags or punctuation have been corrected.
+
+Memory-NLS retains recognizable XML/MediaWiki motifs, including references,
+links and table rows, despite invented words and unmatched tags. The Transformer
+recovers some recognizable scaffolding, while forms such as `<contribuor>`,
+`</commmment>` and broken attributes persist in the final sample.
+
+The author's analogy is **memorizing versus learning a reusable structure**:
+recalling familiar fragments versus retaining the relationships that make them
+fit together. Here, that analogy describes the interpretation of persistence of
+form under training pressure. The samples illustrate it; they do not directly
+measure memorization or establish semantic understanding.
+
+**[See the Transformer before, during and after the collapse, plus all final samples →](docs/final-generation.md)**
+
 ## Try it locally
 
 ### 01 · Inspect the results — no GPU required
@@ -142,10 +172,10 @@ causality. [Environment and verification details →](docs/reproduction.md)
 
 ### 03 · Load the pretrained models offline
 
-| Model | Local snapshot | Original source |
-|---|---|---|
-| **Memory-NLS · 71M** | [Weights and configuration](models/mnsm-memnls-70m-enwik8/) | [Hugging Face](https://huggingface.co/qrv0/mnsm-memnls-70m-enwik8) |
-| **Transformer · 72M** | [Weights and configuration](models/mnsm-transformer-70m-enwik8/) | [Hugging Face](https://huggingface.co/qrv0/mnsm-transformer-70m-enwik8) |
+| Model | Local snapshot |
+|---|---|
+| **Memory-NLS · 71M** | [Weights and configuration](models/mnsm-memnls-70m-enwik8/) |
+| **Transformer · 72M** | [Weights and configuration](models/mnsm-transformer-70m-enwik8/) |
 
 Both snapshots are preserved locally: **about 572 MB combined**, with pinned source
 revisions and verified hashes. Both loaded successfully into the original local
@@ -158,8 +188,8 @@ shasum -a 256 -c models/SHA256SUMS
 
 **[Open the offline inference example →](docs/pretrained.md#cpu-inference-using-local-files)**
 
-Once dependencies and local weights are present, inference needs no Hugging Face
-account or network connection. When distributed through Git LFS, retrieve the full
+Once dependencies and local weights are present, inference needs no external account
+or network connection. When distributed through Git LFS, retrieve the full
 weights with `git lfs pull` first; pointer files alone do not contain the model.
 
 ## Explore the project
@@ -167,6 +197,7 @@ weights with `git lfs pull` first; pointer files alone do not contain the model.
 | Start here | What you will find |
 |---|---|
 | [Architecture](docs/architecture.md) | Field equation, memory layer and model structure |
+| [Final generation comparison](docs/final-generation.md) | Unedited outputs and the interpretation of scars after recovery |
 | [Reproduction guide](docs/reproduction.md) | Environments, data, experiment commands and known limitations |
 | [Pretrained models](docs/pretrained.md) | Offline loading, source revisions, checksums and Git LFS |
 | [Neural implementation](implementation/neural/) | Layers, models, training and generation |

@@ -1,8 +1,6 @@
-"""Self-contained Transformer language model for HuggingFace.
+"""Self-contained Transformer language model for local checkpoint loading.
 
-Loads the published checkpoint without requiring the full mnsm repository.
-
-Usage: see model card README.md.
+See docs/pretrained.md for the offline inference example.
 """
 
 from __future__ import annotations
