@@ -1,0 +1,435 @@
+Using device: NVIDIA GeForce RTX 4060 Laptop GPU
+Training both ~70M models for 50000 steps each on enwik8.
+
+Loading enwik8 (byte-level)…
+  enwik8: 100,000,000 bytes
+  vocab size: 256 (byte-level)
+  train bytes: 90,000,000, val bytes: 5,000,000
+
+======================================================================
+  Memory-NLS (70M, long horizon, enwik8)
+======================================================================
+  parameters: 71,069,184
+  [memnls] step      0/50000  lr 6.00e-07  loss 7.0706  (1s, eta 0m)
+  [memnls] step    500/50000  lr 3.00e-04  loss 2.5108  (111s, eta 184m)
+    [memnls] eval step    500  val_loss 2.5032  ppl 12.22
+  [memnls] step   1000/50000  lr 3.00e-04  loss 2.2687  (223s, eta 182m)
+    [memnls] eval step   1000  val_loss 2.2246  ppl 9.25
+  [memnls] step   1500/50000  lr 3.00e-04  loss 2.1276  (335s, eta 180m)
+    [memnls] eval step   1500  val_loss 2.1127  ppl 8.27
+  [memnls] step   2000/50000  lr 2.99e-04  loss 2.0411  (446s, eta 179m)
+    [memnls] eval step   2000  val_loss 2.0091  ppl 7.46
+  [memnls] milestone 2000 samples captured
+  [memnls] step   2500/50000  lr 2.99e-04  loss 1.9457  (564s, eta 179m)
+    [memnls] eval step   2500  val_loss 1.9616  ppl 7.11
+  [memnls] step   3000/50000  lr 2.98e-04  loss 1.8971  (676s, eta 176m)
+    [memnls] eval step   3000  val_loss 1.8518  ppl 6.37
+  [memnls] step   3500/50000  lr 2.98e-04  loss 1.8645  (787s, eta 174m)
+    [memnls] eval step   3500  val_loss 1.8594  ppl 6.42
+  [memnls] step   4000/50000  lr 2.97e-04  loss 1.8270  (899s, eta 172m)
+    [memnls] eval step   4000  val_loss 1.8364  ppl 6.27
+  [memnls] milestone 4000 samples captured
+  [memnls] step   4500/50000  lr 2.96e-04  loss 1.7951  (1015s, eta 171m)
+    [memnls] eval step   4500  val_loss 1.8053  ppl 6.08
+  [memnls] step   5000/50000  lr 2.95e-04  loss 1.7900  (1126s, eta 169m)
+    [memnls] eval step   5000  val_loss 1.7773  ppl 5.91
+  [memnls] step   5500/50000  lr 2.93e-04  loss 1.7538  (1238s, eta 167m)
+    [memnls] eval step   5500  val_loss 1.7853  ppl 5.96
+  [memnls] step   6000/50000  lr 2.92e-04  loss 1.7470  (1350s, eta 165m)
+    [memnls] eval step   6000  val_loss 1.7150  ppl 5.56
+  [memnls] step   6500/50000  lr 2.90e-04  loss 1.7206  (1461s, eta 163m)
+    [memnls] eval step   6500  val_loss 1.7454  ppl 5.73
+  [memnls] step   7000/50000  lr 2.89e-04  loss 1.7341  (1573s, eta 161m)
+    [memnls] eval step   7000  val_loss 1.6964  ppl 5.45
+  [memnls] step   7500/50000  lr 2.87e-04  loss 1.6958  (1685s, eta 159m)
+    [memnls] eval step   7500  val_loss 1.6816  ppl 5.37
+  [memnls] step   8000/50000  lr 2.85e-04  loss 1.6995  (1796s, eta 157m)
+    [memnls] eval step   8000  val_loss 1.7317  ppl 5.65
+  [memnls] milestone 8000 samples captured
+  [memnls] step   8500/50000  lr 2.83e-04  loss 1.6731  (1912s, eta 156m)
+    [memnls] eval step   8500  val_loss 1.7217  ppl 5.59
+  [memnls] step   9000/50000  lr 2.81e-04  loss 1.6692  (2024s, eta 154m)
+    [memnls] eval step   9000  val_loss 1.6853  ppl 5.39
+  [memnls] step   9500/50000  lr 2.79e-04  loss 1.6513  (2136s, eta 152m)
+    [memnls] eval step   9500  val_loss 1.6543  ppl 5.23
+  [memnls] step  10000/50000  lr 2.76e-04  loss 1.6326  (2247s, eta 150m)
+    [memnls] eval step  10000  val_loss 1.6733  ppl 5.33
+  [memnls] step  10500/50000  lr 2.74e-04  loss 1.6350  (2359s, eta 148m)
+    [memnls] eval step  10500  val_loss 1.6697  ppl 5.31
+  [memnls] step  11000/50000  lr 2.71e-04  loss 1.6199  (2471s, eta 146m)
+    [memnls] eval step  11000  val_loss 1.6581  ppl 5.25
+  [memnls] step  11500/50000  lr 2.68e-04  loss 1.6235  (2582s, eta 144m)
+    [memnls] eval step  11500  val_loss 1.5895  ppl 4.90
+  [memnls] step  12000/50000  lr 2.66e-04  loss 1.6245  (2694s, eta 142m)
+    [memnls] eval step  12000  val_loss 1.6356  ppl 5.13
+  [memnls] step  12500/50000  lr 2.63e-04  loss 1.6112  (2806s, eta 140m)
+    [memnls] eval step  12500  val_loss 1.6381  ppl 5.15
+  [memnls] step  13000/50000  lr 2.60e-04  loss 1.6054  (2917s, eta 138m)
+    [memnls] eval step  13000  val_loss 1.6143  ppl 5.02
+  [memnls] step  13500/50000  lr 2.57e-04  loss 1.5746  (3029s, eta 136m)
+    [memnls] eval step  13500  val_loss 1.6386  ppl 5.15
+  [memnls] step  14000/50000  lr 2.53e-04  loss 1.5892  (3141s, eta 135m)
+    [memnls] eval step  14000  val_loss 1.6170  ppl 5.04
+  [memnls] step  14500/50000  lr 2.50e-04  loss 1.5865  (3252s, eta 133m)
+    [memnls] eval step  14500  val_loss 1.6088  ppl 5.00
+  [memnls] step  15000/50000  lr 2.47e-04  loss 1.5835  (3364s, eta 131m)
+    [memnls] eval step  15000  val_loss 1.5746  ppl 4.83
+  [memnls] step  15500/50000  lr 2.43e-04  loss 1.5702  (3476s, eta 129m)
+    [memnls] eval step  15500  val_loss 1.5478  ppl 4.70
+  [memnls] step  16000/50000  lr 2.40e-04  loss 1.5625  (3588s, eta 127m)
+    [memnls] eval step  16000  val_loss 1.5880  ppl 4.89
+  [memnls] milestone 16000 samples captured
+  [memnls] step  16500/50000  lr 2.36e-04  loss 1.5493  (3703s, eta 125m)
+    [memnls] eval step  16500  val_loss 1.6284  ppl 5.10
+  [memnls] step  17000/50000  lr 2.32e-04  loss 1.5443  (3815s, eta 123m)
+    [memnls] eval step  17000  val_loss 1.5559  ppl 4.74
+  [memnls] step  17500/50000  lr 2.29e-04  loss 1.5523  (3927s, eta 122m)
+    [memnls] eval step  17500  val_loss 1.5593  ppl 4.76
+  [memnls] step  18000/50000  lr 2.25e-04  loss 1.5348  (4038s, eta 120m)
+    [memnls] eval step  18000  val_loss 1.5271  ppl 4.60
+  [memnls] step  18500/50000  lr 2.21e-04  loss 1.5407  (4150s, eta 118m)
+    [memnls] eval step  18500  val_loss 1.5424  ppl 4.68
+  [memnls] step  19000/50000  lr 2.17e-04  loss 1.5094  (4262s, eta 116m)
+    [memnls] eval step  19000  val_loss 1.5688  ppl 4.80
+  [memnls] step  19500/50000  lr 2.13e-04  loss 1.5193  (4373s, eta 114m)
+    [memnls] eval step  19500  val_loss 1.5239  ppl 4.59
+  [memnls] step  20000/50000  lr 2.09e-04  loss 1.5215  (4485s, eta 112m)
+    [memnls] eval step  20000  val_loss 1.5464  ppl 4.69
+  [memnls] step  20500/50000  lr 2.05e-04  loss 1.5145  (4597s, eta 110m)
+    [memnls] eval step  20500  val_loss 1.5656  ppl 4.79
+  [memnls] step  21000/50000  lr 2.01e-04  loss 1.5026  (4715s, eta 109m)
+    [memnls] eval step  21000  val_loss 1.5261  ppl 4.60
+  [memnls] step  21500/50000  lr 1.97e-04  loss 1.5144  (4826s, eta 107m)
+    [memnls] eval step  21500  val_loss 1.5412  ppl 4.67
+  [memnls] step  22000/50000  lr 1.93e-04  loss 1.4906  (4938s, eta 105m)
+    [memnls] eval step  22000  val_loss 1.5694  ppl 4.80
+  [memnls] step  22500/50000  lr 1.88e-04  loss 1.4903  (5049s, eta 103m)
+    [memnls] eval step  22500  val_loss 1.5265  ppl 4.60
+  [memnls] step  23000/50000  lr 1.84e-04  loss 1.4832  (5161s, eta 101m)
+    [memnls] eval step  23000  val_loss 1.5379  ppl 4.65
+  [memnls] step  23500/50000  lr 1.80e-04  loss 1.4840  (5273s, eta 99m)
+    [memnls] eval step  23500  val_loss 1.5293  ppl 4.62
+  [memnls] step  24000/50000  lr 1.76e-04  loss 1.4752  (5384s, eta 97m)
+    [memnls] eval step  24000  val_loss 1.5356  ppl 4.64
+  [memnls] step  24500/50000  lr 1.71e-04  loss 1.4690  (5496s, eta 95m)
+    [memnls] eval step  24500  val_loss 1.4984  ppl 4.47
+  [memnls] step  25000/50000  lr 1.67e-04  loss 1.4704  (5607s, eta 93m)
+    [memnls] eval step  25000  val_loss 1.4966  ppl 4.47
+  [memnls] step  25500/50000  lr 1.63e-04  loss 1.4638  (5719s, eta 92m)
+    [memnls] eval step  25500  val_loss 1.4467  ppl 4.25
+  [memnls] step  26000/50000  lr 1.59e-04  loss 1.4400  (5831s, eta 90m)
+    [memnls] eval step  26000  val_loss 1.4963  ppl 4.47
+  [memnls] step  26500/50000  lr 1.54e-04  loss 1.4656  (5942s, eta 88m)
+    [memnls] eval step  26500  val_loss 1.4994  ppl 4.48
+  [memnls] step  27000/50000  lr 1.50e-04  loss 1.4676  (6054s, eta 86m)
+    [memnls] eval step  27000  val_loss 1.4970  ppl 4.47
+  [memnls] step  27500/50000  lr 1.46e-04  loss 1.4546  (6165s, eta 84m)
+    [memnls] eval step  27500  val_loss 1.5358  ppl 4.65
+  [memnls] step  28000/50000  lr 1.42e-04  loss 1.4263  (6277s, eta 82m)
+    [memnls] eval step  28000  val_loss 1.4825  ppl 4.40
+  [memnls] step  28500/50000  lr 1.37e-04  loss 1.4332  (6389s, eta 80m)
+    [memnls] eval step  28500  val_loss 1.5087  ppl 4.52
+  [memnls] step  29000/50000  lr 1.33e-04  loss 1.4368  (6500s, eta 78m)
+    [memnls] eval step  29000  val_loss 1.4633  ppl 4.32
+  [memnls] step  29500/50000  lr 1.29e-04  loss 1.4373  (6612s, eta 77m)
+    [memnls] eval step  29500  val_loss 1.4865  ppl 4.42
+  [memnls] step  30000/50000  lr 1.25e-04  loss 1.4168  (6723s, eta 75m)
+    [memnls] eval step  30000  val_loss 1.4683  ppl 4.34
+  [memnls] step  30500/50000  lr 1.21e-04  loss 1.4218  (6835s, eta 73m)
+    [memnls] eval step  30500  val_loss 1.4555  ppl 4.29
+  [memnls] step  31000/50000  lr 1.17e-04  loss 1.4438  (6947s, eta 71m)
+    [memnls] eval step  31000  val_loss 1.5237  ppl 4.59
+  [memnls] step  31500/50000  lr 1.13e-04  loss 1.4231  (7059s, eta 69m)
+    [memnls] eval step  31500  val_loss 1.4585  ppl 4.30
+  [memnls] step  32000/50000  lr 1.09e-04  loss 1.4160  (7170s, eta 67m)
+    [memnls] eval step  32000  val_loss 1.4442  ppl 4.24
+  [memnls] milestone 32000 samples captured
+  [memnls] step  32500/50000  lr 1.05e-04  loss 1.4147  (7286s, eta 65m)
+    [memnls] eval step  32500  val_loss 1.4124  ppl 4.11
+  [memnls] step  33000/50000  lr 1.01e-04  loss 1.4042  (7398s, eta 64m)
+    [memnls] eval step  33000  val_loss 1.4395  ppl 4.22
+  [memnls] step  33500/50000  lr 9.75e-05  loss 1.4152  (7509s, eta 62m)
+    [memnls] eval step  33500  val_loss 1.4198  ppl 4.14
+  [memnls] step  34000/50000  lr 9.38e-05  loss 1.3984  (7621s, eta 60m)
+    [memnls] eval step  34000  val_loss 1.4089  ppl 4.09
+  [memnls] step  34500/50000  lr 9.02e-05  loss 1.4084  (7733s, eta 58m)
+    [memnls] eval step  34500  val_loss 1.4647  ppl 4.33
+  [memnls] step  35000/50000  lr 8.67e-05  loss 1.4014  (7844s, eta 56m)
+    [memnls] eval step  35000  val_loss 1.4645  ppl 4.33
+  [memnls] step  35500/50000  lr 8.32e-05  loss 1.3954  (7956s, eta 54m)
+    [memnls] eval step  35500  val_loss 1.4184  ppl 4.13
+  [memnls] step  36000/50000  lr 7.99e-05  loss 1.3794  (8068s, eta 52m)
+    [memnls] eval step  36000  val_loss 1.4520  ppl 4.27
+  [memnls] step  36500/50000  lr 7.66e-05  loss 1.3747  (8179s, eta 50m)
+    [memnls] eval step  36500  val_loss 1.4087  ppl 4.09
+  [memnls] step  37000/50000  lr 7.34e-05  loss 1.3730  (8291s, eta 49m)
+    [memnls] eval step  37000  val_loss 1.4125  ppl 4.11
+  [memnls] step  37500/50000  lr 7.03e-05  loss 1.3745  (8403s, eta 47m)
+    [memnls] eval step  37500  val_loss 1.3918  ppl 4.02
+  [memnls] step  38000/50000  lr 6.73e-05  loss 1.3753  (8514s, eta 45m)
+    [memnls] eval step  38000  val_loss 1.3929  ppl 4.03
+  [memnls] step  38500/50000  lr 6.44e-05  loss 1.3680  (8626s, eta 43m)
+    [memnls] eval step  38500  val_loss 1.3793  ppl 3.97
+  [memnls] step  39000/50000  lr 6.16e-05  loss 1.3777  (8738s, eta 41m)
+    [memnls] eval step  39000  val_loss 1.4115  ppl 4.10
+  [memnls] step  39500/50000  lr 5.89e-05  loss 1.3659  (8849s, eta 39m)
+    [memnls] eval step  39500  val_loss 1.4116  ppl 4.10
+  [memnls] step  40000/50000  lr 5.63e-05  loss 1.3632  (8961s, eta 37m)
+    [memnls] eval step  40000  val_loss 1.3880  ppl 4.01
+  [memnls] step  40500/50000  lr 5.38e-05  loss 1.3533  (9073s, eta 35m)
+    [memnls] eval step  40500  val_loss 1.4094  ppl 4.09
+  [memnls] step  41000/50000  lr 5.14e-05  loss 1.3625  (9185s, eta 34m)
+    [memnls] eval step  41000  val_loss 1.4194  ppl 4.13
+  [memnls] step  41500/50000  lr 4.92e-05  loss 1.3535  (9296s, eta 32m)
+    [memnls] eval step  41500  val_loss 1.4422  ppl 4.23
+  [memnls] step  42000/50000  lr 4.70e-05  loss 1.3492  (9408s, eta 30m)
+    [memnls] eval step  42000  val_loss 1.4596  ppl 4.30
+  [memnls] step  42500/50000  lr 4.50e-05  loss 1.3446  (9520s, eta 28m)
+    [memnls] eval step  42500  val_loss 1.3890  ppl 4.01
+  [memnls] step  43000/50000  lr 4.31e-05  loss 1.3500  (9632s, eta 26m)
+    [memnls] eval step  43000  val_loss 1.5012  ppl 4.49
+  [memnls] step  43500/50000  lr 4.13e-05  loss 1.3466  (9743s, eta 24m)
+    [memnls] eval step  43500  val_loss 1.4211  ppl 4.14
+  [memnls] step  44000/50000  lr 3.97e-05  loss 1.3331  (9855s, eta 22m)
+    [memnls] eval step  44000  val_loss 1.4229  ppl 4.15
+  [memnls] step  44500/50000  lr 3.81e-05  loss 1.3385  (9967s, eta 21m)
+    [memnls] eval step  44500  val_loss 1.3848  ppl 3.99
+  [memnls] step  45000/50000  lr 3.67e-05  loss 1.3395  (10078s, eta 19m)
+    [memnls] eval step  45000  val_loss 1.3771  ppl 3.96
+  [memnls] step  45500/50000  lr 3.55e-05  loss 1.3374  (10190s, eta 17m)
+    [memnls] eval step  45500  val_loss 1.4330  ppl 4.19
+  [memnls] step  46000/50000  lr 3.43e-05  loss 1.3591  (10302s, eta 15m)
+    [memnls] eval step  46000  val_loss 1.4319  ppl 4.19
+  [memnls] step  46500/50000  lr 3.33e-05  loss 1.3384  (10413s, eta 13m)
+    [memnls] eval step  46500  val_loss 1.4071  ppl 4.08
+  [memnls] step  47000/50000  lr 3.24e-05  loss 1.3368  (10525s, eta 11m)
+    [memnls] eval step  47000  val_loss 1.3594  ppl 3.89
+  [memnls] step  47500/50000  lr 3.17e-05  loss 1.3373  (10637s, eta 9m)
+    [memnls] eval step  47500  val_loss 1.3744  ppl 3.95
+  [memnls] step  48000/50000  lr 3.11e-05  loss 1.3467  (10748s, eta 7m)
+    [memnls] eval step  48000  val_loss 1.3507  ppl 3.86
+  [memnls] step  48500/50000  lr 3.06e-05  loss 1.3321  (10860s, eta 6m)
+    [memnls] eval step  48500  val_loss 1.4179  ppl 4.13
+  [memnls] step  49000/50000  lr 3.03e-05  loss 1.3259  (10972s, eta 4m)
+    [memnls] eval step  49000  val_loss 1.3716  ppl 3.94
+  [memnls] step  49500/50000  lr 3.01e-05  loss 1.3164  (11083s, eta 2m)
+    [memnls] eval step  49500  val_loss 1.3757  ppl 3.96
+  [memnls] step  50000/50000  lr 3.00e-05  loss 1.3226  (11195s, eta 0m)
+    [memnls] eval step  50000  val_loss 1.4510  ppl 4.27
+  [memnls] milestone 50000 samples captured
+  [memnls] done in 11200s (3.11h)
+
+======================================================================
+  Transformer (70M, long horizon, enwik8)
+======================================================================
+  parameters: 71,863,296
+  [xformer] step      0/50000  lr 6.00e-07  loss 5.8132  (0s, eta 0m)
+  [xformer] step    500/50000  lr 3.00e-04  loss 2.6010  (114s, eta 188m)
+    [xformer] eval step    500  val_loss 2.6066  ppl 13.55
+  [xformer] step   1000/50000  lr 3.00e-04  loss 2.1893  (229s, eta 187m)
+    [xformer] eval step   1000  val_loss 2.1204  ppl 8.33
+  [xformer] step   1500/50000  lr 3.00e-04  loss 1.7269  (343s, eta 185m)
+    [xformer] eval step   1500  val_loss 1.6673  ppl 5.30
+  [xformer] step   2000/50000  lr 2.99e-04  loss 1.4116  (458s, eta 183m)
+    [xformer] eval step   2000  val_loss 1.4203  ppl 4.14
+  [xformer] milestone 2000 samples captured
+  [xformer] step   2500/50000  lr 2.99e-04  loss 1.3080  (577s, eta 183m)
+    [xformer] eval step   2500  val_loss 1.3126  ppl 3.72
+  [xformer] step   3000/50000  lr 2.98e-04  loss 1.2262  (691s, eta 181m)
+    [xformer] eval step   3000  val_loss 1.2428  ppl 3.47
+  [xformer] step   3500/50000  lr 2.98e-04  loss 1.1889  (806s, eta 179m)
+    [xformer] eval step   3500  val_loss 1.1703  ppl 3.22
+  [xformer] step   4000/50000  lr 2.97e-04  loss 1.1632  (921s, eta 176m)
+    [xformer] eval step   4000  val_loss 1.1655  ppl 3.21
+  [xformer] milestone 4000 samples captured
+  [xformer] step   4500/50000  lr 2.96e-04  loss 1.1396  (1039s, eta 175m)
+    [xformer] eval step   4500  val_loss 1.1454  ppl 3.14
+  [xformer] step   5000/50000  lr 2.95e-04  loss 1.1144  (1154s, eta 173m)
+    [xformer] eval step   5000  val_loss 1.1391  ppl 3.12
+  [xformer] step   5500/50000  lr 2.93e-04  loss 1.0906  (1269s, eta 171m)
+    [xformer] eval step   5500  val_loss 1.1232  ppl 3.07
+  [xformer] step   6000/50000  lr 2.92e-04  loss 1.0767  (1384s, eta 169m)
+    [xformer] eval step   6000  val_loss 1.0840  ppl 2.96
+  [xformer] step   6500/50000  lr 2.90e-04  loss 1.0478  (1498s, eta 167m)
+    [xformer] eval step   6500  val_loss 1.1067  ppl 3.02
+  [xformer] step   7000/50000  lr 2.89e-04  loss 1.0613  (1613s, eta 165m)
+    [xformer] eval step   7000  val_loss 1.0506  ppl 2.86
+  [xformer] step   7500/50000  lr 2.87e-04  loss 1.0357  (1728s, eta 163m)
+    [xformer] eval step   7500  val_loss 1.0832  ppl 2.95
+  [xformer] step   8000/50000  lr 2.85e-04  loss 1.0255  (1842s, eta 161m)
+    [xformer] eval step   8000  val_loss 1.0421  ppl 2.84
+  [xformer] milestone 8000 samples captured
+  [xformer] step   8500/50000  lr 2.83e-04  loss 1.0163  (1961s, eta 160m)
+    [xformer] eval step   8500  val_loss 1.0083  ppl 2.74
+  [xformer] step   9000/50000  lr 2.81e-04  loss 1.0085  (2076s, eta 158m)
+    [xformer] eval step   9000  val_loss 1.0172  ppl 2.77
+  [xformer] step   9500/50000  lr 2.79e-04  loss 1.0018  (2190s, eta 156m)
+    [xformer] eval step   9500  val_loss 1.0651  ppl 2.90
+  [xformer] step  10000/50000  lr 2.76e-04  loss 1.0026  (2305s, eta 154m)
+    [xformer] eval step  10000  val_loss 1.0039  ppl 2.73
+  [xformer] step  10500/50000  lr 2.74e-04  loss 0.9782  (2420s, eta 152m)
+    [xformer] eval step  10500  val_loss 1.0451  ppl 2.84
+  [xformer] step  11000/50000  lr 2.71e-04  loss 0.9763  (2535s, eta 150m)
+    [xformer] eval step  11000  val_loss 0.9839  ppl 2.67
+  [xformer] step  11500/50000  lr 2.68e-04  loss 0.9698  (2650s, eta 148m)
+    [xformer] eval step  11500  val_loss 1.0176  ppl 2.77
+  [xformer] step  12000/50000  lr 2.66e-04  loss 0.9645  (2764s, eta 146m)
+    [xformer] eval step  12000  val_loss 1.0180  ppl 2.77
+  [xformer] step  12500/50000  lr 2.63e-04  loss 0.9437  (2879s, eta 144m)
+    [xformer] eval step  12500  val_loss 1.0042  ppl 2.73
+  [xformer] step  13000/50000  lr 2.60e-04  loss 0.9496  (2994s, eta 142m)
+    [xformer] eval step  13000  val_loss 1.0063  ppl 2.74
+  [xformer] step  13500/50000  lr 2.57e-04  loss 0.9472  (3108s, eta 140m)
+    [xformer] eval step  13500  val_loss 0.9760  ppl 2.65
+  [xformer] step  14000/50000  lr 2.53e-04  loss 0.9275  (3223s, eta 138m)
+    [xformer] eval step  14000  val_loss 0.9588  ppl 2.61
+  [xformer] step  14500/50000  lr 2.50e-04  loss 0.9122  (3338s, eta 136m)
+    [xformer] eval step  14500  val_loss 0.9572  ppl 2.60
+  [xformer] step  15000/50000  lr 2.47e-04  loss 0.9441  (3453s, eta 134m)
+    [xformer] eval step  15000  val_loss 0.9831  ppl 2.67
+  [xformer] step  15500/50000  lr 2.43e-04  loss 0.9311  (3569s, eta 132m)
+    [xformer] eval step  15500  val_loss 0.9630  ppl 2.62
+  [xformer] step  16000/50000  lr 2.40e-04  loss 0.9147  (3687s, eta 131m)
+    [xformer] eval step  16000  val_loss 0.9441  ppl 2.57
+  [xformer] milestone 16000 samples captured
+  [xformer] step  16500/50000  lr 2.36e-04  loss 0.9186  (3810s, eta 129m)
+    [xformer] eval step  16500  val_loss 0.9834  ppl 2.67
+  [xformer] step  17000/50000  lr 2.32e-04  loss 0.9590  (3930s, eta 127m)
+    [xformer] eval step  17000  val_loss 0.9888  ppl 2.69
+  [xformer] step  17500/50000  lr 2.29e-04  loss 0.9575  (4044s, eta 125m)
+    [xformer] eval step  17500  val_loss 0.9959  ppl 2.71
+  [xformer] step  18000/50000  lr 2.25e-04  loss 0.9418  (4167s, eta 123m)
+    [xformer] eval step  18000  val_loss 0.9746  ppl 2.65
+  [xformer] step  18500/50000  lr 2.21e-04  loss 0.9944  (4290s, eta 122m)
+    [xformer] eval step  18500  val_loss 1.0641  ppl 2.90
+  [xformer] step  19000/50000  lr 2.17e-04  loss 0.9777  (4405s, eta 120m)
+    [xformer] eval step  19000  val_loss 1.0094  ppl 2.74
+  [xformer] step  19500/50000  lr 2.13e-04  loss 1.0365  (4523s, eta 118m)
+    [xformer] eval step  19500  val_loss 1.1282  ppl 3.09
+  [xformer] step  20000/50000  lr 2.09e-04  loss 1.1143  (4638s, eta 116m)
+    [xformer] eval step  20000  val_loss 1.0276  ppl 2.79
+  [xformer] step  20500/50000  lr 2.05e-04  loss 1.0131  (4760s, eta 114m)
+    [xformer] eval step  20500  val_loss 0.9961  ppl 2.71
+  [xformer] step  21000/50000  lr 2.01e-04  loss 0.9239  (4880s, eta 112m)
+    [xformer] eval step  21000  val_loss 0.9770  ppl 2.66
+  [xformer] step  21500/50000  lr 1.97e-04  loss 0.9237  (4997s, eta 110m)
+    [xformer] eval step  21500  val_loss 0.9665  ppl 2.63
+  [xformer] step  22000/50000  lr 1.93e-04  loss 0.9353  (5111s, eta 108m)
+    [xformer] eval step  22000  val_loss 0.9850  ppl 2.68
+  [xformer] step  22500/50000  lr 1.88e-04  loss 0.9206  (5226s, eta 106m)
+    [xformer] eval step  22500  val_loss 0.9316  ppl 2.54
+  [xformer] step  23000/50000  lr 1.84e-04  loss 0.9468  (5348s, eta 105m)
+    [xformer] eval step  23000  val_loss 0.9736  ppl 2.65
+  [xformer] step  23500/50000  lr 1.80e-04  loss 1.0068  (5463s, eta 103m)
+    [xformer] eval step  23500  val_loss 0.9934  ppl 2.70
+  [xformer] step  24000/50000  lr 1.76e-04  loss 1.0191  (5577s, eta 101m)
+    [xformer] eval step  24000  val_loss 1.1563  ppl 3.18
+  [xformer] step  24500/50000  lr 1.71e-04  loss 0.9485  (5692s, eta 99m)
+    [xformer] eval step  24500  val_loss 0.9985  ppl 2.71
+  [xformer] step  25000/50000  lr 1.67e-04  loss 1.1344  (5807s, eta 97m)
+    [xformer] eval step  25000  val_loss 1.0369  ppl 2.82
+  [xformer] step  25500/50000  lr 1.63e-04  loss 1.0312  (5921s, eta 95m)
+    [xformer] eval step  25500  val_loss 1.0423  ppl 2.84
+  [xformer] step  26000/50000  lr 1.59e-04  loss 0.9763  (6036s, eta 93m)
+    [xformer] eval step  26000  val_loss 0.9844  ppl 2.68
+  [xformer] step  26500/50000  lr 1.54e-04  loss 1.0278  (6151s, eta 91m)
+    [xformer] eval step  26500  val_loss 1.0772  ppl 2.94
+  [xformer] step  27000/50000  lr 1.50e-04  loss 1.1261  (6266s, eta 89m)
+    [xformer] eval step  27000  val_loss 1.1362  ppl 3.11
+  [xformer] step  27500/50000  lr 1.46e-04  loss 1.1749  (6380s, eta 87m)
+    [xformer] eval step  27500  val_loss 1.1324  ppl 3.10
+  [xformer] step  28000/50000  lr 1.42e-04  loss 1.5971  (6495s, eta 85m)
+    [xformer] eval step  28000  val_loss 1.5000  ppl 4.48
+  [xformer] step  28500/50000  lr 1.37e-04  loss 3.1408  (6610s, eta 83m)
+    [xformer] eval step  28500  val_loss 3.2042  ppl 24.64
+  [xformer] step  29000/50000  lr 1.33e-04  loss 2.9883  (6725s, eta 81m)
+    [xformer] eval step  29000  val_loss 2.9586  ppl 19.27
+  [xformer] step  29500/50000  lr 1.29e-04  loss 2.8921  (6840s, eta 79m)
+    [xformer] eval step  29500  val_loss 2.7007  ppl 14.89
+  [xformer] step  30000/50000  lr 1.25e-04  loss 2.6541  (6954s, eta 77m)
+    [xformer] eval step  30000  val_loss 2.5890  ppl 13.32
+  [xformer] step  30500/50000  lr 1.21e-04  loss 2.6252  (7069s, eta 75m)
+    [xformer] eval step  30500  val_loss 2.6507  ppl 14.16
+  [xformer] step  31000/50000  lr 1.17e-04  loss 2.4636  (7184s, eta 73m)
+    [xformer] eval step  31000  val_loss 2.5431  ppl 12.72
+  [xformer] step  31500/50000  lr 1.13e-04  loss 2.3410  (7299s, eta 71m)
+    [xformer] eval step  31500  val_loss 2.2129  ppl 9.14
+  [xformer] step  32000/50000  lr 1.09e-04  loss 2.2412  (7414s, eta 70m)
+    [xformer] eval step  32000  val_loss 2.1733  ppl 8.79
+  [xformer] milestone 32000 samples captured
+  [xformer] step  32500/50000  lr 1.05e-04  loss 2.4869  (7532s, eta 68m)
+    [xformer] eval step  32500  val_loss 2.5655  ppl 13.01
+  [xformer] step  33000/50000  lr 1.01e-04  loss 2.8043  (7647s, eta 66m)
+    [xformer] eval step  33000  val_loss 2.9271  ppl 18.67
+  [xformer] step  33500/50000  lr 9.75e-05  loss 3.3586  (7762s, eta 64m)
+    [xformer] eval step  33500  val_loss 3.3019  ppl 27.17
+  [xformer] step  34000/50000  lr 9.38e-05  loss 3.1020  (7877s, eta 62m)
+    [xformer] eval step  34000  val_loss 3.1405  ppl 23.12
+  [xformer] step  34500/50000  lr 9.02e-05  loss 3.0936  (7991s, eta 60m)
+    [xformer] eval step  34500  val_loss 3.0303  ppl 20.70
+  [xformer] step  35000/50000  lr 8.67e-05  loss 2.9338  (8106s, eta 58m)
+    [xformer] eval step  35000  val_loss 2.8954  ppl 18.09
+  [xformer] step  35500/50000  lr 8.32e-05  loss 2.8060  (8221s, eta 56m)
+    [xformer] eval step  35500  val_loss 2.7330  ppl 15.38
+  [xformer] step  36000/50000  lr 7.99e-05  loss 2.9125  (8336s, eta 54m)
+    [xformer] eval step  36000  val_loss 2.9340  ppl 18.80
+  [xformer] step  36500/50000  lr 7.66e-05  loss 2.9045  (8450s, eta 52m)
+    [xformer] eval step  36500  val_loss 2.8704  ppl 17.64
+  [xformer] step  37000/50000  lr 7.34e-05  loss 2.7938  (8565s, eta 50m)
+    [xformer] eval step  37000  val_loss 2.7408  ppl 15.50
+  [xformer] step  37500/50000  lr 7.03e-05  loss 2.8104  (8680s, eta 48m)
+    [xformer] eval step  37500  val_loss 2.7421  ppl 15.52
+  [xformer] step  38000/50000  lr 6.73e-05  loss 2.8626  (8795s, eta 46m)
+    [xformer] eval step  38000  val_loss 2.7649  ppl 15.88
+  [xformer] step  38500/50000  lr 6.44e-05  loss 2.6983  (8909s, eta 44m)
+    [xformer] eval step  38500  val_loss 2.6894  ppl 14.72
+  [xformer] step  39000/50000  lr 6.16e-05  loss 2.5930  (9024s, eta 42m)
+    [xformer] eval step  39000  val_loss 2.5816  ppl 13.22
+  [xformer] step  39500/50000  lr 5.89e-05  loss 2.4854  (9139s, eta 40m)
+    [xformer] eval step  39500  val_loss 2.4235  ppl 11.28
+  [xformer] step  40000/50000  lr 5.63e-05  loss 2.3091  (9254s, eta 39m)
+    [xformer] eval step  40000  val_loss 2.2794  ppl 9.77
+  [xformer] step  40500/50000  lr 5.38e-05  loss 2.1235  (9369s, eta 37m)
+    [xformer] eval step  40500  val_loss 2.8771  ppl 17.76
+  [xformer] step  41000/50000  lr 5.14e-05  loss 2.1945  (9483s, eta 35m)
+    [xformer] eval step  41000  val_loss 1.9690  ppl 7.16
+  [xformer] step  41500/50000  lr 4.92e-05  loss 1.8378  (9598s, eta 33m)
+    [xformer] eval step  41500  val_loss 1.9079  ppl 6.74
+  [xformer] step  42000/50000  lr 4.70e-05  loss 2.8424  (9713s, eta 31m)
+    [xformer] eval step  42000  val_loss 2.8727  ppl 17.68
+  [xformer] step  42500/50000  lr 4.50e-05  loss 2.7578  (9828s, eta 29m)
+    [xformer] eval step  42500  val_loss 2.7569  ppl 15.75
+  [xformer] step  43000/50000  lr 4.31e-05  loss 2.7244  (9942s, eta 27m)
+    [xformer] eval step  43000  val_loss 2.7076  ppl 14.99
+  [xformer] step  43500/50000  lr 4.13e-05  loss 2.6726  (10057s, eta 25m)
+    [xformer] eval step  43500  val_loss 2.6083  ppl 13.58
+  [xformer] step  44000/50000  lr 3.97e-05  loss 2.5787  (10172s, eta 23m)
+    [xformer] eval step  44000  val_loss 2.5563  ppl 12.89
+  [xformer] step  44500/50000  lr 3.81e-05  loss 2.4215  (10286s, eta 21m)
+    [xformer] eval step  44500  val_loss 2.4000  ppl 11.02
+  [xformer] step  45000/50000  lr 3.67e-05  loss 2.3902  (10401s, eta 19m)
+    [xformer] eval step  45000  val_loss 2.3472  ppl 10.46
+  [xformer] step  45500/50000  lr 3.55e-05  loss 2.2976  (10516s, eta 17m)
+    [xformer] eval step  45500  val_loss 2.2463  ppl 9.45
+  [xformer] step  46000/50000  lr 3.43e-05  loss 2.2764  (10631s, eta 15m)
+    [xformer] eval step  46000  val_loss 2.2524  ppl 9.51
+  [xformer] step  46500/50000  lr 3.33e-05  loss 2.1252  (10745s, eta 13m)
+    [xformer] eval step  46500  val_loss 1.9891  ppl 7.31
+  [xformer] step  47000/50000  lr 3.24e-05  loss 1.6648  (10860s, eta 12m)
+    [xformer] eval step  47000  val_loss 1.6590  ppl 5.25
+  [xformer] step  47500/50000  lr 3.17e-05  loss 1.5778  (10975s, eta 10m)
+    [xformer] eval step  47500  val_loss 1.5431  ppl 4.68
+  [xformer] step  48000/50000  lr 3.11e-05  loss 1.6568  (11090s, eta 8m)
+    [xformer] eval step  48000  val_loss 1.5102  ppl 4.53
+  [xformer] step  48500/50000  lr 3.06e-05  loss 1.5044  (11204s, eta 6m)
+    [xformer] eval step  48500  val_loss 1.4922  ppl 4.45
+  [xformer] step  49000/50000  lr 3.03e-05  loss 1.5230  (11319s, eta 4m)
+    [xformer] eval step  49000  val_loss 1.5187  ppl 4.57
+  [xformer] step  49500/50000  lr 3.01e-05  loss 1.4838  (11434s, eta 2m)
+    [xformer] eval step  49500  val_loss 1.4775  ppl 4.38
+  [xformer] step  50000/50000  lr 3.00e-05  loss 1.5121  (11548s, eta 0m)
+    [xformer] eval step  50000  val_loss 1.5825  ppl 4.87
+  [xformer] milestone 50000 samples captured
+  [xformer] done in 11554s (3.21h)
+
+Report written to /home/l/Documents/Structural Realism in Physics/repo/files2/mnsm/outputs/scale_up/scale_up_results.md
