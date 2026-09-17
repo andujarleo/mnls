@@ -1,0 +1,5 @@
+# Runtime dependencies, not a reconstruction of the original CUDA environment.
+# Install the PyTorch build appropriate for your platform before using a GPU.
+# Versions used for local CPU checks are recorded in docs/reproduction.md.
+numpy
+torch

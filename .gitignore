@@ -1,0 +1,14 @@
+.DS_Store
+__pycache__/
+*.py[cod]
+.venv/
+.pytest_cache/
+.env
+.env.*
+*.part
+*.pt
+*.pth
+experiments/neural/enwik8
+experiments/neural/enwik8.zip
+# Keep the supplied JSON histories, log and figures under version control.
+# Run new experiments in a separate copy; their paths are fixed in the scripts.

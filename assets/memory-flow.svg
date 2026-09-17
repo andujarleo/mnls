@@ -1,0 +1,61 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="470" viewBox="0 0 1280 470" role="img" aria-labelledby="title desc">
+  <title id="title">Inside the Memory-NLS sequence layer</title>
+  <desc id="desc">Projected token representations produce a density signal. Exponentially decaying memory modes act on that signal at multiple time scales. Weighted memory and the instantaneous cubic interaction modulate the projected representation. Output projection and the layer input residual produce an updated representation. Curves are schematic, not measurements.</desc>
+  <defs>
+    <linearGradient id="panel" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#142b2b"/><stop offset="1" stop-color="#101a20"/></linearGradient>
+    <marker id="arrow" markerWidth="8" markerHeight="8" refX="6" refY="4" orient="auto"><path d="M0 1 L6 4 L0 7" fill="none" stroke="#6f989a" stroke-width="1.5"/></marker>
+  </defs>
+  <rect width="1280" height="470" rx="20" fill="#0c1117"/>
+  <g font-family="Arial, Helvetica, sans-serif">
+    <text x="44" y="44" fill="#61dfc8" font-size="13" font-weight="700" letter-spacing="3">INSIDE THE SEQUENCE LAYER</text>
+    <text x="44" y="86" fill="#eef5f4" font-size="29" font-weight="700">The present is modulated by a trace of the past.</text>
+    <text x="44" y="115" fill="#9aaeb8" font-size="16">Causal memory across multiple time scales, followed by nonlinear interaction.</text>
+
+    <g fill="url(#panel)" stroke="#2a424a">
+      <rect x="44" y="154" width="240" height="235" rx="12"/>
+      <rect x="360" y="154" width="240" height="235" rx="12"/>
+      <rect x="676" y="154" width="240" height="235" rx="12"/>
+      <rect x="992" y="154" width="244" height="235" rx="12"/>
+    </g>
+    <g stroke="#6f989a" stroke-width="2" marker-end="url(#arrow)">
+      <path d="M296 270 H346"/><path d="M612 270 H662"/><path d="M928 270 H978"/>
+    </g>
+    <g fill="#61dfc8" font-size="12" font-weight="700" letter-spacing="2">
+      <text x="64" y="184">01 / REPRESENT</text><text x="380" y="184">02 / REMEMBER</text>
+      <text x="696" y="184">03 / INTERACT</text><text x="1012" y="184">04 / UPDATE</text>
+    </g>
+    <g fill="#eef5f4" font-size="22" font-weight="700">
+      <text x="64" y="214">Token density</text><text x="380" y="214">Memory modes</text>
+      <text x="696" y="214">Nonlinear gate</text><text x="1012" y="214">Updated state</text>
+    </g>
+    <g fill="#65dfca">
+      <rect x="72" y="271" width="17" height="25" rx="3" opacity=".35"/>
+      <rect x="103" y="257" width="17" height="39" rx="3" opacity=".5"/>
+      <rect x="134" y="239" width="17" height="57" rx="3" opacity=".8"/>
+      <rect x="165" y="247" width="17" height="49" rx="3" opacity=".7"/>
+      <rect x="196" y="266" width="17" height="30" rx="3" opacity=".6"/>
+      <rect x="227" y="245" width="17" height="51" rx="3"/>
+    </g>
+    <g fill="none" stroke-width="2.6">
+      <path d="M385 240 C407 297 421 301 568 301" stroke="#6ce8cf"/>
+      <path d="M385 240 C421 280 470 301 568 301" stroke="#4db7ad"/>
+      <path d="M385 240 C432 257 485 277 568 288" stroke="#52909e"/>
+      <path d="M385 240 C450 242 510 253 568 266" stroke="#f19887"/>
+    </g>
+    <text x="697" y="256" fill="#f19887" font-size="17">instantaneous density</text>
+    <text x="788" y="279" fill="#8ea6ae" font-size="20">+</text>
+    <text x="715" y="303" fill="#65dfca" font-size="17">weighted memory</text>
+    <g fill="none" stroke="#65dfca" stroke-width="2.6">
+      <path d="M1015 272 C1032 272 1032 248 1048 248 S1070 295 1086 295 S1110 249 1129 249 S1152 275 1170 275 H1214"/>
+      <path d="M1015 290 H1033 M1196 247 H1214" opacity=".4"/>
+    </g>
+    <g fill="#b2c2ca" font-size="15">
+      <text x="64" y="335">Project the input.</text><text x="64" y="358">Mean-square density.</text>
+      <text x="380" y="335">Fast and slow decay.</text><text x="380" y="358">Causal convolution via FFT.</text>
+      <text x="696" y="335">Combine the two signals.</text><text x="696" y="358">Modulate the projected input.</text>
+      <text x="1012" y="335">Project the interaction.</text><text x="1012" y="358">Add the layer input residual.</text>
+    </g>
+    <text x="44" y="431" fill="#7f949f" font-size="13">Conceptual diagram · curves illustrate time scales, not measured experiment outputs.</text>
+    <text x="1236" y="431" fill="#61dfc8" font-size="13" font-weight="700" text-anchor="end">MNSM</text>
+  </g>
+</svg>
